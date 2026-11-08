@@ -1,0 +1,527 @@
+{
+  "type": "wiring",
+  "equipment": "problem-11",
+  "board": {
+    "parts": [
+      {
+        "id": "ac100",
+        "kind": "ac100",
+        "x": 100,
+        "y": 60
+      },
+      {
+        "id": "psu24",
+        "kind": "psu24",
+        "x": 300,
+        "y": 150
+      },
+      {
+        "id": "busP",
+        "kind": "busP",
+        "x": 100,
+        "y": 320,
+        "length": 2800
+      },
+      {
+        "id": "busM",
+        "kind": "busM",
+        "x": 100,
+        "y": 400,
+        "length": 2800
+      },
+      {
+        "id": "plc",
+        "kind": "plc",
+        "x": 300,
+        "y": 650
+      },
+      {
+        "id": "inputUnit",
+        "kind": "inputUnit",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "outputUnit",
+        "kind": "outputUnit",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "pb",
+        "kind": "button",
+        "x": 430,
+        "y": 470,
+        "actuator": "button"
+      },
+      {
+        "id": "pg-top-emitter",
+        "kind": "photoEmitter",
+        "x": 750,
+        "y": 220,
+        "actuator": "light_receiver001"
+      },
+      {
+        "id": "pg-top-receiver",
+        "kind": "photoReceiver",
+        "x": 750,
+        "y": 470,
+        "actuator": "light_receiver001"
+      },
+      {
+        "id": "pg-bottom-emitter",
+        "kind": "photoEmitter",
+        "x": 860,
+        "y": 220,
+        "actuator": "light_receiver"
+      },
+      {
+        "id": "pg-bottom-receiver",
+        "kind": "photoReceiver",
+        "x": 860,
+        "y": 470,
+        "actuator": "light_receiver"
+      },
+      {
+        "id": "as-ext",
+        "kind": "autoSwitch",
+        "x": 970,
+        "y": 470,
+        "actuator": "air_cylinder_component",
+        "sensor": 1
+      },
+      {
+        "id": "as-ret",
+        "kind": "autoSwitch",
+        "x": 1080,
+        "y": 470,
+        "actuator": "air_cylinder_component",
+        "sensor": 0
+      },
+      {
+        "id": "ac200",
+        "kind": "ac200",
+        "x": 1770,
+        "y": 60
+      },
+      {
+        "id": "mc",
+        "kind": "contactor",
+        "x": 1350,
+        "y": 470
+      },
+      {
+        "id": "motor",
+        "kind": "motor",
+        "x": 1770,
+        "y": 720,
+        "actuator": "belt_combair001"
+      },
+      {
+        "id": "sv",
+        "kind": "valve",
+        "x": 1530,
+        "y": 470,
+        "actuator": "air_cylinder_component"
+      }
+    ],
+    "wires": [
+      {
+        "id": "w-001",
+        "from": {
+          "part": "ac100",
+          "terminal": "L"
+        },
+        "to": {
+          "part": "psu24",
+          "terminal": "L"
+        }
+      },
+      {
+        "id": "w-002",
+        "from": {
+          "part": "ac100",
+          "terminal": "N"
+        },
+        "to": {
+          "part": "psu24",
+          "terminal": "N"
+        }
+      },
+      {
+        "id": "w-003",
+        "from": {
+          "part": "psu24",
+          "terminal": "+V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-004",
+        "from": {
+          "part": "psu24",
+          "terminal": "-V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-005",
+        "from": {
+          "part": "plc",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-006",
+        "from": {
+          "part": "plc",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-007",
+        "from": {
+          "part": "inputUnit",
+          "terminal": "COM0"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-008",
+        "from": {
+          "part": "outputUnit",
+          "terminal": "COM0"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-009",
+        "from": {
+          "part": "pb",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-010",
+        "from": {
+          "part": "pb",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X0"
+        }
+      },
+      {
+        "id": "w-011",
+        "from": {
+          "part": "pg-top-emitter",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-012",
+        "from": {
+          "part": "pg-top-emitter",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-013",
+        "from": {
+          "part": "pg-top-receiver",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-014",
+        "from": {
+          "part": "pg-top-receiver",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-015",
+        "from": {
+          "part": "pg-top-receiver",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X3"
+        }
+      },
+      {
+        "id": "w-016",
+        "from": {
+          "part": "pg-bottom-emitter",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-017",
+        "from": {
+          "part": "pg-bottom-emitter",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-018",
+        "from": {
+          "part": "pg-bottom-receiver",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-019",
+        "from": {
+          "part": "pg-bottom-receiver",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-020",
+        "from": {
+          "part": "pg-bottom-receiver",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X4"
+        }
+      },
+      {
+        "id": "w-021",
+        "from": {
+          "part": "as-ext",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-022",
+        "from": {
+          "part": "as-ext",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-023",
+        "from": {
+          "part": "as-ext",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X5"
+        }
+      },
+      {
+        "id": "w-024",
+        "from": {
+          "part": "as-ret",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-025",
+        "from": {
+          "part": "as-ret",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-026",
+        "from": {
+          "part": "as-ret",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X6"
+        }
+      },
+      {
+        "id": "w-027",
+        "from": {
+          "part": "ac200",
+          "terminal": "R"
+        },
+        "to": {
+          "part": "mc",
+          "terminal": "L1"
+        }
+      },
+      {
+        "id": "w-028",
+        "from": {
+          "part": "ac200",
+          "terminal": "S"
+        },
+        "to": {
+          "part": "mc",
+          "terminal": "L2"
+        }
+      },
+      {
+        "id": "w-029",
+        "from": {
+          "part": "ac200",
+          "terminal": "T"
+        },
+        "to": {
+          "part": "mc",
+          "terminal": "L3"
+        }
+      },
+      {
+        "id": "w-030",
+        "from": {
+          "part": "mc",
+          "terminal": "T1"
+        },
+        "to": {
+          "part": "motor",
+          "terminal": "U"
+        }
+      },
+      {
+        "id": "w-031",
+        "from": {
+          "part": "mc",
+          "terminal": "T2"
+        },
+        "to": {
+          "part": "motor",
+          "terminal": "V"
+        }
+      },
+      {
+        "id": "w-032",
+        "from": {
+          "part": "mc",
+          "terminal": "T3"
+        },
+        "to": {
+          "part": "motor",
+          "terminal": "W"
+        }
+      },
+      {
+        "id": "w-033",
+        "from": {
+          "part": "mc",
+          "terminal": "A1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-034",
+        "from": {
+          "part": "mc",
+          "terminal": "A2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y0"
+        }
+      },
+      {
+        "id": "w-035",
+        "from": {
+          "part": "sv",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-036",
+        "from": {
+          "part": "sv",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y1"
+        }
+      }
+    ]
+  }
+}

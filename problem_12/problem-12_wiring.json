@@ -1,0 +1,510 @@
+{
+  "type": "wiring",
+  "equipment": "problem-12",
+  "board": {
+    "parts": [
+      {
+        "id": "ac100",
+        "kind": "ac100",
+        "x": 100,
+        "y": 60
+      },
+      {
+        "id": "psu24",
+        "kind": "psu24",
+        "x": 300,
+        "y": 150
+      },
+      {
+        "id": "busP",
+        "kind": "busP",
+        "x": 100,
+        "y": 320,
+        "length": 2800
+      },
+      {
+        "id": "busM",
+        "kind": "busM",
+        "x": 100,
+        "y": 400,
+        "length": 2800
+      },
+      {
+        "id": "plc",
+        "kind": "plc",
+        "x": 300,
+        "y": 650
+      },
+      {
+        "id": "inputUnit",
+        "kind": "inputUnit",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "outputUnit",
+        "kind": "outputUnit",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "positionUnit",
+        "kind": "positionUnit",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "pb-home",
+        "kind": "button",
+        "x": 430,
+        "y": 470,
+        "actuator": "button_component1"
+      },
+      {
+        "id": "pb-p1",
+        "kind": "button",
+        "x": 540,
+        "y": 470,
+        "actuator": "button_component2"
+      },
+      {
+        "id": "pb-p2",
+        "kind": "button",
+        "x": 650,
+        "y": 470,
+        "actuator": "button_component3"
+      },
+      {
+        "id": "pb-p3",
+        "kind": "button",
+        "x": 760,
+        "y": 470,
+        "actuator": "button_component4"
+      },
+      {
+        "id": "lamp-home",
+        "kind": "lamp",
+        "x": 1420,
+        "y": 470,
+        "actuator": "lamp_component1"
+      },
+      {
+        "id": "lamp-p1",
+        "kind": "lamp",
+        "x": 1530,
+        "y": 470,
+        "actuator": "lamp_component2"
+      },
+      {
+        "id": "lamp-p2",
+        "kind": "lamp",
+        "x": 1640,
+        "y": 470,
+        "actuator": "lamp_component3"
+      },
+      {
+        "id": "lamp-p3",
+        "kind": "lamp",
+        "x": 1750,
+        "y": 470,
+        "actuator": "lamp_component4"
+      },
+      {
+        "id": "ac200",
+        "kind": "ac200",
+        "x": 2700,
+        "y": 880
+      },
+      {
+        "id": "servoAmp-1",
+        "kind": "servoAmp",
+        "x": 1200,
+        "y": 1050,
+        "actuator": "axis_1"
+      },
+      {
+        "id": "servoMotor-1",
+        "kind": "servoMotor",
+        "x": 1200,
+        "y": 1350,
+        "actuator": "axis_1"
+      }
+    ],
+    "wires": [
+      {
+        "id": "w-001",
+        "from": {
+          "part": "ac100",
+          "terminal": "L"
+        },
+        "to": {
+          "part": "psu24",
+          "terminal": "L"
+        }
+      },
+      {
+        "id": "w-002",
+        "from": {
+          "part": "ac100",
+          "terminal": "N"
+        },
+        "to": {
+          "part": "psu24",
+          "terminal": "N"
+        }
+      },
+      {
+        "id": "w-003",
+        "from": {
+          "part": "psu24",
+          "terminal": "+V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-004",
+        "from": {
+          "part": "psu24",
+          "terminal": "-V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-005",
+        "from": {
+          "part": "plc",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-006",
+        "from": {
+          "part": "plc",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-007",
+        "from": {
+          "part": "inputUnit",
+          "terminal": "COM0"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-008",
+        "from": {
+          "part": "outputUnit",
+          "terminal": "COM0"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-009",
+        "from": {
+          "part": "pb-home",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-010",
+        "from": {
+          "part": "pb-home",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X0"
+        }
+      },
+      {
+        "id": "w-011",
+        "from": {
+          "part": "pb-p1",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-012",
+        "from": {
+          "part": "pb-p1",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X1"
+        }
+      },
+      {
+        "id": "w-013",
+        "from": {
+          "part": "pb-p2",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-014",
+        "from": {
+          "part": "pb-p2",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X2"
+        }
+      },
+      {
+        "id": "w-015",
+        "from": {
+          "part": "pb-p3",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-016",
+        "from": {
+          "part": "pb-p3",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X3"
+        }
+      },
+      {
+        "id": "w-017",
+        "from": {
+          "part": "lamp-home",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-018",
+        "from": {
+          "part": "lamp-home",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y0"
+        }
+      },
+      {
+        "id": "w-019",
+        "from": {
+          "part": "lamp-p1",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-020",
+        "from": {
+          "part": "lamp-p1",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y1"
+        }
+      },
+      {
+        "id": "w-021",
+        "from": {
+          "part": "lamp-p2",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-022",
+        "from": {
+          "part": "lamp-p2",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y2"
+        }
+      },
+      {
+        "id": "w-023",
+        "from": {
+          "part": "lamp-p3",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-024",
+        "from": {
+          "part": "lamp-p3",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y3"
+        }
+      },
+      {
+        "id": "w-025",
+        "from": {
+          "part": "ac200",
+          "terminal": "R"
+        },
+        "to": {
+          "part": "servoAmp-1",
+          "terminal": "L1"
+        }
+      },
+      {
+        "id": "w-026",
+        "from": {
+          "part": "ac200",
+          "terminal": "S"
+        },
+        "to": {
+          "part": "servoAmp-1",
+          "terminal": "L2"
+        }
+      },
+      {
+        "id": "w-027",
+        "from": {
+          "part": "ac200",
+          "terminal": "T"
+        },
+        "to": {
+          "part": "servoAmp-1",
+          "terminal": "L3"
+        }
+      },
+      {
+        "id": "w-028",
+        "from": {
+          "part": "ac200",
+          "terminal": "R"
+        },
+        "to": {
+          "part": "servoAmp-1",
+          "terminal": "L1C"
+        }
+      },
+      {
+        "id": "w-029",
+        "from": {
+          "part": "ac200",
+          "terminal": "S"
+        },
+        "to": {
+          "part": "servoAmp-1",
+          "terminal": "L2C"
+        }
+      },
+      {
+        "id": "w-030",
+        "from": {
+          "part": "servoAmp-1",
+          "terminal": "U"
+        },
+        "to": {
+          "part": "servoMotor-1",
+          "terminal": "U"
+        }
+      },
+      {
+        "id": "w-031",
+        "from": {
+          "part": "servoAmp-1",
+          "terminal": "V"
+        },
+        "to": {
+          "part": "servoMotor-1",
+          "terminal": "V"
+        }
+      },
+      {
+        "id": "w-032",
+        "from": {
+          "part": "servoAmp-1",
+          "terminal": "W"
+        },
+        "to": {
+          "part": "servoMotor-1",
+          "terminal": "W"
+        }
+      },
+      {
+        "id": "w-033",
+        "from": {
+          "part": "servoAmp-1",
+          "terminal": "ENC"
+        },
+        "to": {
+          "part": "servoMotor-1",
+          "terminal": "ENC"
+        }
+      },
+      {
+        "id": "w-034",
+        "from": {
+          "part": "positionUnit",
+          "terminal": "ML"
+        },
+        "to": {
+          "part": "servoAmp-1",
+          "terminal": "ML"
+        }
+      }
+    ]
+  }
+}

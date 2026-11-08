@@ -1,0 +1,596 @@
+{
+  "type": "wiring",
+  "equipment": "problem-7",
+  "board": {
+    "parts": [
+      {
+        "id": "ac100",
+        "kind": "ac100",
+        "x": 100,
+        "y": 60
+      },
+      {
+        "id": "psu24",
+        "kind": "psu24",
+        "x": 300,
+        "y": 150
+      },
+      {
+        "id": "busP",
+        "kind": "busP",
+        "x": 100,
+        "y": 320,
+        "length": 2800
+      },
+      {
+        "id": "busM",
+        "kind": "busM",
+        "x": 100,
+        "y": 400,
+        "length": 2800
+      },
+      {
+        "id": "plc",
+        "kind": "plc",
+        "x": 300,
+        "y": 650
+      },
+      {
+        "id": "inputUnit",
+        "kind": "inputUnit",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "outputUnit",
+        "kind": "outputUnit",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "as-cyl-down",
+        "kind": "autoSwitch",
+        "x": 420,
+        "y": 470,
+        "actuator": "air_cylinder_component",
+        "sensor": 1
+      },
+      {
+        "id": "as-cyl-up",
+        "kind": "autoSwitch",
+        "x": 530,
+        "y": 470,
+        "actuator": "air_cylinder_component",
+        "sensor": 0
+      },
+      {
+        "id": "as-chuck-close",
+        "kind": "autoSwitch",
+        "x": 640,
+        "y": 470,
+        "actuator": "air_chuck_component",
+        "sensor": 1
+      },
+      {
+        "id": "as-chuck-open",
+        "kind": "autoSwitch",
+        "x": 750,
+        "y": 470,
+        "actuator": "air_chuck_component",
+        "sensor": 0
+      },
+      {
+        "id": "pb-up",
+        "kind": "button",
+        "x": 870,
+        "y": 470,
+        "actuator": "button_component_up"
+      },
+      {
+        "id": "pb-down",
+        "kind": "button",
+        "x": 980,
+        "y": 470,
+        "actuator": "button_component_down"
+      },
+      {
+        "id": "pb-open",
+        "kind": "button",
+        "x": 1090,
+        "y": 470,
+        "actuator": "button_component_open"
+      },
+      {
+        "id": "pb-close",
+        "kind": "button",
+        "x": 1200,
+        "y": 470,
+        "actuator": "button_component_close"
+      },
+      {
+        "id": "sv-cyl",
+        "kind": "valve",
+        "x": 1420,
+        "y": 470,
+        "actuator": "air_cylinder_component"
+      },
+      {
+        "id": "sv-chuck",
+        "kind": "valve",
+        "x": 1530,
+        "y": 470,
+        "actuator": "air_chuck_component"
+      },
+      {
+        "id": "lamp-up",
+        "kind": "lamp",
+        "x": 1640,
+        "y": 470,
+        "actuator": "lamp_component_up"
+      },
+      {
+        "id": "lamp-down",
+        "kind": "lamp",
+        "x": 1750,
+        "y": 470,
+        "actuator": "lamp_component_down"
+      },
+      {
+        "id": "lamp-open",
+        "kind": "lamp",
+        "x": 1860,
+        "y": 470,
+        "actuator": "lamp_component_open"
+      },
+      {
+        "id": "lamp-close",
+        "kind": "lamp",
+        "x": 1970,
+        "y": 470,
+        "actuator": "lamp_component_close"
+      }
+    ],
+    "wires": [
+      {
+        "id": "w-001",
+        "from": {
+          "part": "ac100",
+          "terminal": "L"
+        },
+        "to": {
+          "part": "psu24",
+          "terminal": "L"
+        }
+      },
+      {
+        "id": "w-002",
+        "from": {
+          "part": "ac100",
+          "terminal": "N"
+        },
+        "to": {
+          "part": "psu24",
+          "terminal": "N"
+        }
+      },
+      {
+        "id": "w-003",
+        "from": {
+          "part": "psu24",
+          "terminal": "+V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-004",
+        "from": {
+          "part": "psu24",
+          "terminal": "-V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-005",
+        "from": {
+          "part": "plc",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-006",
+        "from": {
+          "part": "plc",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-007",
+        "from": {
+          "part": "inputUnit",
+          "terminal": "COM0"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-008",
+        "from": {
+          "part": "outputUnit",
+          "terminal": "COM0"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-009",
+        "from": {
+          "part": "as-cyl-down",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-010",
+        "from": {
+          "part": "as-cyl-down",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-011",
+        "from": {
+          "part": "as-cyl-down",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X0"
+        }
+      },
+      {
+        "id": "w-012",
+        "from": {
+          "part": "as-cyl-up",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-013",
+        "from": {
+          "part": "as-cyl-up",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-014",
+        "from": {
+          "part": "as-cyl-up",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X1"
+        }
+      },
+      {
+        "id": "w-015",
+        "from": {
+          "part": "as-chuck-close",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-016",
+        "from": {
+          "part": "as-chuck-close",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-017",
+        "from": {
+          "part": "as-chuck-close",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X2"
+        }
+      },
+      {
+        "id": "w-018",
+        "from": {
+          "part": "as-chuck-open",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-019",
+        "from": {
+          "part": "as-chuck-open",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-020",
+        "from": {
+          "part": "as-chuck-open",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X3"
+        }
+      },
+      {
+        "id": "w-021",
+        "from": {
+          "part": "pb-up",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-022",
+        "from": {
+          "part": "pb-up",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X4"
+        }
+      },
+      {
+        "id": "w-023",
+        "from": {
+          "part": "pb-down",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-024",
+        "from": {
+          "part": "pb-down",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X5"
+        }
+      },
+      {
+        "id": "w-025",
+        "from": {
+          "part": "pb-open",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-026",
+        "from": {
+          "part": "pb-open",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X6"
+        }
+      },
+      {
+        "id": "w-027",
+        "from": {
+          "part": "pb-close",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-028",
+        "from": {
+          "part": "pb-close",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X7"
+        }
+      },
+      {
+        "id": "w-029",
+        "from": {
+          "part": "sv-cyl",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-030",
+        "from": {
+          "part": "sv-cyl",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y0"
+        }
+      },
+      {
+        "id": "w-031",
+        "from": {
+          "part": "sv-chuck",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-032",
+        "from": {
+          "part": "sv-chuck",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y1"
+        }
+      },
+      {
+        "id": "w-033",
+        "from": {
+          "part": "lamp-up",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-034",
+        "from": {
+          "part": "lamp-up",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y2"
+        }
+      },
+      {
+        "id": "w-035",
+        "from": {
+          "part": "lamp-down",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-036",
+        "from": {
+          "part": "lamp-down",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y3"
+        }
+      },
+      {
+        "id": "w-037",
+        "from": {
+          "part": "lamp-open",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-038",
+        "from": {
+          "part": "lamp-open",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y4"
+        }
+      },
+      {
+        "id": "w-039",
+        "from": {
+          "part": "lamp-close",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-040",
+        "from": {
+          "part": "lamp-close",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y5"
+        }
+      }
+    ]
+  }
+}
