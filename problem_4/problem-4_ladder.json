@@ -12,13 +12,13 @@
         "device": "X2"
       },
       {
-        "cell": "LINE",
+        "cell": "LD",
         "hasLine": [
           false,
           false
         ],
         "check": true,
-        "device": null
+        "device": "X1"
       },
       {
         "cell": "LINE",
@@ -104,13 +104,13 @@
         "device": "X3"
       },
       {
-        "cell": "LINE",
+        "cell": "LD",
         "hasLine": [
           false,
           false
         ],
         "check": true,
-        "device": null
+        "device": "X0"
       },
       {
         "cell": "LINE",

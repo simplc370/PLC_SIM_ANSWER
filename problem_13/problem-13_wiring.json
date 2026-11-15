@@ -676,7 +676,7 @@
         },
         "to": {
           "part": "servoAmp-1",
-          "terminal": "ML"
+          "terminal": "ML_IN"
         }
       },
       {
@@ -781,12 +781,12 @@
       {
         "id": "w-055",
         "from": {
-          "part": "positionUnit",
-          "terminal": "ML"
+          "part": "servoAmp-1",
+          "terminal": "ML_OUT"
         },
         "to": {
           "part": "servoAmp-2",
-          "terminal": "ML"
+          "terminal": "ML_IN"
         }
       },
       {
@@ -891,12 +891,12 @@
       {
         "id": "w-065",
         "from": {
-          "part": "positionUnit",
-          "terminal": "ML"
+          "part": "servoAmp-2",
+          "terminal": "ML_OUT"
         },
         "to": {
           "part": "servoAmp-3",
-          "terminal": "ML"
+          "terminal": "ML_IN"
         }
       }
     ]
