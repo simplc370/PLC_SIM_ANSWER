@@ -1,0 +1,1749 @@
+{
+  "type": "wiring",
+  "equipment": "problem-14",
+  "board": {
+    "parts": [
+      {
+        "id": "ac100",
+        "kind": "ac100",
+        "x": 100,
+        "y": 60
+      },
+      {
+        "id": "psu24",
+        "kind": "psu24",
+        "x": 300,
+        "y": 150
+      },
+      {
+        "id": "busP",
+        "kind": "busP",
+        "x": 100,
+        "y": 320,
+        "length": 2900
+      },
+      {
+        "id": "busM",
+        "kind": "busM",
+        "x": 100,
+        "y": 400,
+        "length": 2900
+      },
+      {
+        "id": "plc",
+        "kind": "plc",
+        "x": 300,
+        "y": 650
+      },
+      {
+        "id": "inputUnit",
+        "kind": "inputUnit",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "outputUnit",
+        "kind": "outputUnit",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "positionUnit",
+        "kind": "positionUnit",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "id": "busP2",
+        "kind": "busP",
+        "x": 100,
+        "y": 860,
+        "length": 2900
+      },
+      {
+        "id": "busM2",
+        "kind": "busM",
+        "x": 100,
+        "y": 900,
+        "length": 2900
+      },
+      {
+        "id": "pb-start",
+        "kind": "button",
+        "x": 430,
+        "y": 470,
+        "actuator": "btn_start"
+      },
+      {
+        "id": "pb-stop",
+        "kind": "button",
+        "x": 540,
+        "y": 470,
+        "actuator": "btn_stop"
+      },
+      {
+        "id": "pb-reset",
+        "kind": "button",
+        "x": 650,
+        "y": 470,
+        "actuator": "btn_reset"
+      },
+      {
+        "id": "pb-estop",
+        "kind": "button",
+        "x": 760,
+        "y": 470,
+        "actuator": "estop"
+      },
+      {
+        "id": "pg-base-receiver",
+        "kind": "photoReceiver",
+        "x": 850,
+        "y": 470,
+        "actuator": "gate1_r"
+      },
+      {
+        "id": "pg-base-emitter",
+        "kind": "photoEmitter",
+        "x": 860,
+        "y": 200,
+        "actuator": "gate1_r"
+      },
+      {
+        "id": "as-ldz-up",
+        "kind": "autoSwitch",
+        "x": 970,
+        "y": 470,
+        "actuator": "ld_z",
+        "sensor": 0
+      },
+      {
+        "id": "as-ldz-down",
+        "kind": "autoSwitch",
+        "x": 1080,
+        "y": 470,
+        "actuator": "ld_z",
+        "sensor": 1
+      },
+      {
+        "id": "as-chuck-open",
+        "kind": "autoSwitch",
+        "x": 1190,
+        "y": 470,
+        "actuator": "ld_chuck",
+        "sensor": 0
+      },
+      {
+        "id": "as-chuck-close",
+        "kind": "autoSwitch",
+        "x": 420,
+        "y": 960,
+        "actuator": "ld_chuck",
+        "sensor": 1
+      },
+      {
+        "id": "as-clamp-ret",
+        "kind": "autoSwitch",
+        "x": 530,
+        "y": 960,
+        "actuator": "clamp",
+        "sensor": 0
+      },
+      {
+        "id": "as-clamp-ext",
+        "kind": "autoSwitch",
+        "x": 640,
+        "y": 960,
+        "actuator": "clamp",
+        "sensor": 1
+      },
+      {
+        "id": "prox-jig",
+        "kind": "proxSensor",
+        "x": 740,
+        "y": 960,
+        "actuator": "prox_jig"
+      },
+      {
+        "id": "pg-cover-receiver",
+        "kind": "photoReceiver",
+        "x": 850,
+        "y": 960,
+        "actuator": "gate2_r"
+      },
+      {
+        "id": "pg-cover-emitter",
+        "kind": "photoEmitter",
+        "x": 860,
+        "y": 1110,
+        "actuator": "gate2_r"
+      },
+      {
+        "id": "prox-mag",
+        "kind": "proxSensor",
+        "x": 960,
+        "y": 960,
+        "actuator": "prox_mag"
+      },
+      {
+        "id": "ps-vac",
+        "kind": "pressureSwitch",
+        "x": 1070,
+        "y": 960,
+        "actuator": "cv_vacuum"
+      },
+      {
+        "id": "pg-exit-receiver",
+        "kind": "photoReceiver",
+        "x": 1180,
+        "y": 960,
+        "actuator": "gate3_r"
+      },
+      {
+        "id": "pg-exit-emitter",
+        "kind": "photoEmitter",
+        "x": 1190,
+        "y": 1110,
+        "actuator": "gate3_r"
+      },
+      {
+        "id": "ac200",
+        "kind": "ac200",
+        "x": 2700,
+        "y": 60
+      },
+      {
+        "id": "mc-supply",
+        "kind": "contactor",
+        "x": 1400,
+        "y": 470
+      },
+      {
+        "id": "motor-supply",
+        "kind": "motor",
+        "x": 2650,
+        "y": 470,
+        "actuator": "conveyor1"
+      },
+      {
+        "id": "sv-ldz",
+        "kind": "valve",
+        "x": 1530,
+        "y": 470,
+        "actuator": "ld_z"
+      },
+      {
+        "id": "sv-chuck",
+        "kind": "valve",
+        "x": 1640,
+        "y": 470,
+        "actuator": "ld_chuck"
+      },
+      {
+        "id": "sv-clamp",
+        "kind": "valve",
+        "x": 1750,
+        "y": 470,
+        "actuator": "clamp"
+      },
+      {
+        "id": "sv-vac",
+        "kind": "valve",
+        "x": 1860,
+        "y": 470,
+        "actuator": "cv_vacuum"
+      },
+      {
+        "id": "sv-break",
+        "kind": "breakValve",
+        "x": 1970,
+        "y": 470,
+        "actuator": "cv_vacuum"
+      },
+      {
+        "id": "mc-exit",
+        "kind": "contactor",
+        "x": 2060,
+        "y": 470
+      },
+      {
+        "id": "motor-exit",
+        "kind": "motor",
+        "x": 2800,
+        "y": 470,
+        "actuator": "conveyor2"
+      },
+      {
+        "id": "lamp-run",
+        "kind": "lamp",
+        "x": 2200,
+        "y": 470,
+        "actuator": "lamp_run"
+      },
+      {
+        "id": "lamp-error",
+        "kind": "lamp",
+        "x": 1430,
+        "y": 960,
+        "actuator": "lamp_error"
+      },
+      {
+        "id": "lamp-green",
+        "kind": "lamp",
+        "x": 1540,
+        "y": 960,
+        "actuator": "tower_green"
+      },
+      {
+        "id": "lamp-yellow",
+        "kind": "lamp",
+        "x": 1650,
+        "y": 960,
+        "actuator": "tower_yellow"
+      },
+      {
+        "id": "lamp-red",
+        "kind": "lamp",
+        "x": 1760,
+        "y": 960,
+        "actuator": "tower_red"
+      },
+      {
+        "id": "ac200-servo",
+        "kind": "ac200",
+        "x": 2700,
+        "y": 1150
+      },
+      {
+        "id": "servoAmp-1",
+        "kind": "servoAmp",
+        "x": 1200,
+        "y": 1350,
+        "actuator": "axis_1"
+      },
+      {
+        "id": "servoMotor-1",
+        "kind": "servoMotor",
+        "x": 1200,
+        "y": 1650,
+        "actuator": "axis_1"
+      },
+      {
+        "id": "servoAmp-2",
+        "kind": "servoAmp",
+        "x": 1650,
+        "y": 1350,
+        "actuator": "axis_2"
+      },
+      {
+        "id": "servoMotor-2",
+        "kind": "servoMotor",
+        "x": 1650,
+        "y": 1650,
+        "actuator": "axis_2"
+      },
+      {
+        "id": "servoAmp-3",
+        "kind": "servoAmp",
+        "x": 2100,
+        "y": 1350,
+        "actuator": "axis_3"
+      },
+      {
+        "id": "servoMotor-3",
+        "kind": "servoMotor",
+        "x": 2100,
+        "y": 1650,
+        "actuator": "axis_3"
+      }
+    ],
+    "wires": [
+      {
+        "id": "w-001",
+        "from": {
+          "part": "ac100",
+          "terminal": "L"
+        },
+        "to": {
+          "part": "psu24",
+          "terminal": "L"
+        }
+      },
+      {
+        "id": "w-002",
+        "from": {
+          "part": "ac100",
+          "terminal": "N"
+        },
+        "to": {
+          "part": "psu24",
+          "terminal": "N"
+        }
+      },
+      {
+        "id": "w-003",
+        "from": {
+          "part": "psu24",
+          "terminal": "+V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-004",
+        "from": {
+          "part": "psu24",
+          "terminal": "-V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-005",
+        "from": {
+          "part": "psu24",
+          "terminal": "+V"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-006",
+        "from": {
+          "part": "psu24",
+          "terminal": "-V"
+        },
+        "to": {
+          "part": "busM2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-007",
+        "from": {
+          "part": "plc",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-008",
+        "from": {
+          "part": "plc",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-009",
+        "from": {
+          "part": "inputUnit",
+          "terminal": "COM0"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-010",
+        "from": {
+          "part": "outputUnit",
+          "terminal": "COM0"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-011",
+        "from": {
+          "part": "pb-start",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-012",
+        "from": {
+          "part": "pb-start",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X0"
+        }
+      },
+      {
+        "id": "w-013",
+        "from": {
+          "part": "pb-stop",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-014",
+        "from": {
+          "part": "pb-stop",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X1"
+        }
+      },
+      {
+        "id": "w-015",
+        "from": {
+          "part": "pb-reset",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-016",
+        "from": {
+          "part": "pb-reset",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X2"
+        }
+      },
+      {
+        "id": "w-017",
+        "from": {
+          "part": "pb-estop",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-018",
+        "from": {
+          "part": "pb-estop",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X3"
+        }
+      },
+      {
+        "id": "w-019",
+        "from": {
+          "part": "pg-base-receiver",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-020",
+        "from": {
+          "part": "pg-base-receiver",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-021",
+        "from": {
+          "part": "pg-base-receiver",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X4"
+        }
+      },
+      {
+        "id": "w-022",
+        "from": {
+          "part": "pg-base-emitter",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-023",
+        "from": {
+          "part": "pg-base-emitter",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-024",
+        "from": {
+          "part": "as-ldz-up",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-025",
+        "from": {
+          "part": "as-ldz-up",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-026",
+        "from": {
+          "part": "as-ldz-up",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X5"
+        }
+      },
+      {
+        "id": "w-027",
+        "from": {
+          "part": "as-ldz-down",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-028",
+        "from": {
+          "part": "as-ldz-down",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-029",
+        "from": {
+          "part": "as-ldz-down",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X6"
+        }
+      },
+      {
+        "id": "w-030",
+        "from": {
+          "part": "as-chuck-open",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-031",
+        "from": {
+          "part": "as-chuck-open",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-032",
+        "from": {
+          "part": "as-chuck-open",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X7"
+        }
+      },
+      {
+        "id": "w-033",
+        "from": {
+          "part": "as-chuck-close",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-034",
+        "from": {
+          "part": "as-chuck-close",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-035",
+        "from": {
+          "part": "as-chuck-close",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X8"
+        }
+      },
+      {
+        "id": "w-036",
+        "from": {
+          "part": "as-clamp-ret",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-037",
+        "from": {
+          "part": "as-clamp-ret",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-038",
+        "from": {
+          "part": "as-clamp-ret",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X9"
+        }
+      },
+      {
+        "id": "w-039",
+        "from": {
+          "part": "as-clamp-ext",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-040",
+        "from": {
+          "part": "as-clamp-ext",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-041",
+        "from": {
+          "part": "as-clamp-ext",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X10"
+        }
+      },
+      {
+        "id": "w-042",
+        "from": {
+          "part": "prox-jig",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-043",
+        "from": {
+          "part": "prox-jig",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-044",
+        "from": {
+          "part": "prox-jig",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X11"
+        }
+      },
+      {
+        "id": "w-045",
+        "from": {
+          "part": "pg-cover-receiver",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-046",
+        "from": {
+          "part": "pg-cover-receiver",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-047",
+        "from": {
+          "part": "pg-cover-receiver",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X12"
+        }
+      },
+      {
+        "id": "w-048",
+        "from": {
+          "part": "pg-cover-emitter",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-049",
+        "from": {
+          "part": "pg-cover-emitter",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-050",
+        "from": {
+          "part": "prox-mag",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-051",
+        "from": {
+          "part": "prox-mag",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-052",
+        "from": {
+          "part": "prox-mag",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X13"
+        }
+      },
+      {
+        "id": "w-053",
+        "from": {
+          "part": "ps-vac",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-054",
+        "from": {
+          "part": "ps-vac",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-055",
+        "from": {
+          "part": "ps-vac",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X14"
+        }
+      },
+      {
+        "id": "w-056",
+        "from": {
+          "part": "pg-exit-receiver",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-057",
+        "from": {
+          "part": "pg-exit-receiver",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-058",
+        "from": {
+          "part": "pg-exit-receiver",
+          "terminal": "OUT"
+        },
+        "to": {
+          "part": "inputUnit",
+          "terminal": "X15"
+        }
+      },
+      {
+        "id": "w-059",
+        "from": {
+          "part": "pg-exit-emitter",
+          "terminal": "+24V"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-060",
+        "from": {
+          "part": "pg-exit-emitter",
+          "terminal": "0V"
+        },
+        "to": {
+          "part": "busM2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-061",
+        "from": {
+          "part": "ac200",
+          "terminal": "R"
+        },
+        "to": {
+          "part": "mc-supply",
+          "terminal": "L1"
+        }
+      },
+      {
+        "id": "w-062",
+        "from": {
+          "part": "ac200",
+          "terminal": "S"
+        },
+        "to": {
+          "part": "mc-supply",
+          "terminal": "L2"
+        }
+      },
+      {
+        "id": "w-063",
+        "from": {
+          "part": "ac200",
+          "terminal": "T"
+        },
+        "to": {
+          "part": "mc-supply",
+          "terminal": "L3"
+        }
+      },
+      {
+        "id": "w-064",
+        "from": {
+          "part": "mc-supply",
+          "terminal": "A1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-065",
+        "from": {
+          "part": "mc-supply",
+          "terminal": "A2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y0"
+        }
+      },
+      {
+        "id": "w-066",
+        "from": {
+          "part": "mc-supply",
+          "terminal": "T1"
+        },
+        "to": {
+          "part": "motor-supply",
+          "terminal": "U"
+        }
+      },
+      {
+        "id": "w-067",
+        "from": {
+          "part": "mc-supply",
+          "terminal": "T2"
+        },
+        "to": {
+          "part": "motor-supply",
+          "terminal": "V"
+        }
+      },
+      {
+        "id": "w-068",
+        "from": {
+          "part": "mc-supply",
+          "terminal": "T3"
+        },
+        "to": {
+          "part": "motor-supply",
+          "terminal": "W"
+        }
+      },
+      {
+        "id": "w-069",
+        "from": {
+          "part": "sv-ldz",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-070",
+        "from": {
+          "part": "sv-ldz",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y1"
+        }
+      },
+      {
+        "id": "w-071",
+        "from": {
+          "part": "sv-chuck",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-072",
+        "from": {
+          "part": "sv-chuck",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y2"
+        }
+      },
+      {
+        "id": "w-073",
+        "from": {
+          "part": "sv-clamp",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-074",
+        "from": {
+          "part": "sv-clamp",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y3"
+        }
+      },
+      {
+        "id": "w-075",
+        "from": {
+          "part": "sv-vac",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-076",
+        "from": {
+          "part": "sv-vac",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y4"
+        }
+      },
+      {
+        "id": "w-077",
+        "from": {
+          "part": "sv-break",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-078",
+        "from": {
+          "part": "sv-break",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y5"
+        }
+      },
+      {
+        "id": "w-079",
+        "from": {
+          "part": "ac200",
+          "terminal": "R"
+        },
+        "to": {
+          "part": "mc-exit",
+          "terminal": "L1"
+        }
+      },
+      {
+        "id": "w-080",
+        "from": {
+          "part": "ac200",
+          "terminal": "S"
+        },
+        "to": {
+          "part": "mc-exit",
+          "terminal": "L2"
+        }
+      },
+      {
+        "id": "w-081",
+        "from": {
+          "part": "ac200",
+          "terminal": "T"
+        },
+        "to": {
+          "part": "mc-exit",
+          "terminal": "L3"
+        }
+      },
+      {
+        "id": "w-082",
+        "from": {
+          "part": "mc-exit",
+          "terminal": "A1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-083",
+        "from": {
+          "part": "mc-exit",
+          "terminal": "A2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y6"
+        }
+      },
+      {
+        "id": "w-084",
+        "from": {
+          "part": "mc-exit",
+          "terminal": "T1"
+        },
+        "to": {
+          "part": "motor-exit",
+          "terminal": "U"
+        }
+      },
+      {
+        "id": "w-085",
+        "from": {
+          "part": "mc-exit",
+          "terminal": "T2"
+        },
+        "to": {
+          "part": "motor-exit",
+          "terminal": "V"
+        }
+      },
+      {
+        "id": "w-086",
+        "from": {
+          "part": "mc-exit",
+          "terminal": "T3"
+        },
+        "to": {
+          "part": "motor-exit",
+          "terminal": "W"
+        }
+      },
+      {
+        "id": "w-087",
+        "from": {
+          "part": "lamp-run",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-088",
+        "from": {
+          "part": "lamp-run",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y7"
+        }
+      },
+      {
+        "id": "w-089",
+        "from": {
+          "part": "lamp-error",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-090",
+        "from": {
+          "part": "lamp-error",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y8"
+        }
+      },
+      {
+        "id": "w-091",
+        "from": {
+          "part": "lamp-green",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-092",
+        "from": {
+          "part": "lamp-green",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y9"
+        }
+      },
+      {
+        "id": "w-093",
+        "from": {
+          "part": "lamp-yellow",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-094",
+        "from": {
+          "part": "lamp-yellow",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y10"
+        }
+      },
+      {
+        "id": "w-095",
+        "from": {
+          "part": "lamp-red",
+          "terminal": "1"
+        },
+        "to": {
+          "part": "busP2",
+          "terminal": "BUS"
+        }
+      },
+      {
+        "id": "w-096",
+        "from": {
+          "part": "lamp-red",
+          "terminal": "2"
+        },
+        "to": {
+          "part": "outputUnit",
+          "terminal": "Y11"
+        }
+      },
+      {
+        "id": "w-097",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "R"
+        },
+        "to": {
+          "part": "servoAmp-1",
+          "terminal": "L1"
+        }
+      },
+      {
+        "id": "w-098",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "S"
+        },
+        "to": {
+          "part": "servoAmp-1",
+          "terminal": "L2"
+        }
+      },
+      {
+        "id": "w-099",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "T"
+        },
+        "to": {
+          "part": "servoAmp-1",
+          "terminal": "L3"
+        }
+      },
+      {
+        "id": "w-100",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "R"
+        },
+        "to": {
+          "part": "servoAmp-1",
+          "terminal": "L1C"
+        }
+      },
+      {
+        "id": "w-101",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "S"
+        },
+        "to": {
+          "part": "servoAmp-1",
+          "terminal": "L2C"
+        }
+      },
+      {
+        "id": "w-102",
+        "from": {
+          "part": "servoAmp-1",
+          "terminal": "U"
+        },
+        "to": {
+          "part": "servoMotor-1",
+          "terminal": "U"
+        }
+      },
+      {
+        "id": "w-103",
+        "from": {
+          "part": "servoAmp-1",
+          "terminal": "V"
+        },
+        "to": {
+          "part": "servoMotor-1",
+          "terminal": "V"
+        }
+      },
+      {
+        "id": "w-104",
+        "from": {
+          "part": "servoAmp-1",
+          "terminal": "W"
+        },
+        "to": {
+          "part": "servoMotor-1",
+          "terminal": "W"
+        }
+      },
+      {
+        "id": "w-105",
+        "from": {
+          "part": "servoAmp-1",
+          "terminal": "ENC"
+        },
+        "to": {
+          "part": "servoMotor-1",
+          "terminal": "ENC"
+        }
+      },
+      {
+        "id": "w-106",
+        "from": {
+          "part": "positionUnit",
+          "terminal": "ML"
+        },
+        "to": {
+          "part": "servoAmp-1",
+          "terminal": "ML_IN"
+        }
+      },
+      {
+        "id": "w-107",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "R"
+        },
+        "to": {
+          "part": "servoAmp-2",
+          "terminal": "L1"
+        }
+      },
+      {
+        "id": "w-108",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "S"
+        },
+        "to": {
+          "part": "servoAmp-2",
+          "terminal": "L2"
+        }
+      },
+      {
+        "id": "w-109",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "T"
+        },
+        "to": {
+          "part": "servoAmp-2",
+          "terminal": "L3"
+        }
+      },
+      {
+        "id": "w-110",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "R"
+        },
+        "to": {
+          "part": "servoAmp-2",
+          "terminal": "L1C"
+        }
+      },
+      {
+        "id": "w-111",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "S"
+        },
+        "to": {
+          "part": "servoAmp-2",
+          "terminal": "L2C"
+        }
+      },
+      {
+        "id": "w-112",
+        "from": {
+          "part": "servoAmp-2",
+          "terminal": "U"
+        },
+        "to": {
+          "part": "servoMotor-2",
+          "terminal": "U"
+        }
+      },
+      {
+        "id": "w-113",
+        "from": {
+          "part": "servoAmp-2",
+          "terminal": "V"
+        },
+        "to": {
+          "part": "servoMotor-2",
+          "terminal": "V"
+        }
+      },
+      {
+        "id": "w-114",
+        "from": {
+          "part": "servoAmp-2",
+          "terminal": "W"
+        },
+        "to": {
+          "part": "servoMotor-2",
+          "terminal": "W"
+        }
+      },
+      {
+        "id": "w-115",
+        "from": {
+          "part": "servoAmp-2",
+          "terminal": "ENC"
+        },
+        "to": {
+          "part": "servoMotor-2",
+          "terminal": "ENC"
+        }
+      },
+      {
+        "id": "w-116",
+        "from": {
+          "part": "servoAmp-1",
+          "terminal": "ML_OUT"
+        },
+        "to": {
+          "part": "servoAmp-2",
+          "terminal": "ML_IN"
+        }
+      },
+      {
+        "id": "w-117",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "R"
+        },
+        "to": {
+          "part": "servoAmp-3",
+          "terminal": "L1"
+        }
+      },
+      {
+        "id": "w-118",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "S"
+        },
+        "to": {
+          "part": "servoAmp-3",
+          "terminal": "L2"
+        }
+      },
+      {
+        "id": "w-119",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "T"
+        },
+        "to": {
+          "part": "servoAmp-3",
+          "terminal": "L3"
+        }
+      },
+      {
+        "id": "w-120",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "R"
+        },
+        "to": {
+          "part": "servoAmp-3",
+          "terminal": "L1C"
+        }
+      },
+      {
+        "id": "w-121",
+        "from": {
+          "part": "ac200-servo",
+          "terminal": "S"
+        },
+        "to": {
+          "part": "servoAmp-3",
+          "terminal": "L2C"
+        }
+      },
+      {
+        "id": "w-122",
+        "from": {
+          "part": "servoAmp-3",
+          "terminal": "U"
+        },
+        "to": {
+          "part": "servoMotor-3",
+          "terminal": "U"
+        }
+      },
+      {
+        "id": "w-123",
+        "from": {
+          "part": "servoAmp-3",
+          "terminal": "V"
+        },
+        "to": {
+          "part": "servoMotor-3",
+          "terminal": "V"
+        }
+      },
+      {
+        "id": "w-124",
+        "from": {
+          "part": "servoAmp-3",
+          "terminal": "W"
+        },
+        "to": {
+          "part": "servoMotor-3",
+          "terminal": "W"
+        }
+      },
+      {
+        "id": "w-125",
+        "from": {
+          "part": "servoAmp-3",
+          "terminal": "ENC"
+        },
+        "to": {
+          "part": "servoMotor-3",
+          "terminal": "ENC"
+        }
+      },
+      {
+        "id": "w-126",
+        "from": {
+          "part": "servoAmp-2",
+          "terminal": "ML_OUT"
+        },
+        "to": {
+          "part": "servoAmp-3",
+          "terminal": "ML_IN"
+        }
+      }
+    ]
+  }
+}
